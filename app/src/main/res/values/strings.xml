@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">My Application</string>
+
+    <string name="pizza_bbq">BBQ</string>
+    <string name="pizza_pepperoni">Pepperoni</string>
+    <string name="pizza_diavola">Diavola</string>
 </resources>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/home"
+    app:startDestination="@id/fragment_favorite_pizza">
+
+    <fragment
+        android:id="@+id/fragment_favorite_pizza"
+        android:name="com.vaios.jalapeno.home.MyFavoritePizzaFragment" />
+
+    <include app:graph="@navigation/pizza_details" />
+
+</navigation>

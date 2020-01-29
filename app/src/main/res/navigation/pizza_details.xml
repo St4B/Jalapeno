@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    app:startDestination="@id/fragment_details_router"
+    xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/pizza_details">
+
+        <fragment
+            android:id="@+id/fragment_details_router"
+            android:name="com.vaios.jalapeno.list.PizzaDetailsRouterFragment" />
+
+        <fragment
+            android:id="@+id/fragment_diavola"
+            android:name="com.vaios.jalapeno.list.DiavolaFragment" />
+
+        <fragment
+            android:id="@+id/fragment_bbq"
+            android:name="com.vaios.jalapeno.list.BBQFragment" />
+
+        <fragment
+            android:id="@+id/fragment_pepperoni"
+            android:name="com.vaios.jalapeno.list.PepperoniFragment" />
+
+
+</navigation>

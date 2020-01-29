@@ -6,8 +6,16 @@
 
     <fragment
         android:id="@+id/fragment_favorite_pizza"
-        android:name="com.vaios.jalapeno.home.MyFavoritePizzaFragment" />
+        android:label="Home"
+        android:name="com.vaios.jalapeno.home.MyFavoritePizzaFragment" >
 
-    <include app:graph="@navigation/pizza_details" />
+        <action
+            android:id="@+id/go_to_details"
+            app:destination="@id/pizza_details" />
+
+    </fragment>
+
+    <include
+        app:graph="@navigation/pizza_details" />
 
 </navigation>

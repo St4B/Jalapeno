@@ -1,11 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
-    app:startDestination="@id/fragment_list"
-    xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/list">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/list"
+    app:startDestination="@id/fragment_list">
 
     <fragment
         android:id="@+id/fragment_list"
-        android:name="com.vaios.jalapeno.list.PizzaListFragment" />
+        android:label="Pizzas"
+        android:name="com.vaios.jalapeno.list.PizzaListFragment">
+
+        <action
+            android:id="@+id/go_to_details"
+            app:destination="@id/pizza_details" />
+
+    </fragment>
+
 
     <include app:graph="@navigation/pizza_details" />
 

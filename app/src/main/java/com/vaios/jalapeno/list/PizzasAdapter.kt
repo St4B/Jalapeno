@@ -13,6 +13,8 @@ class PizzasAdapter : RecyclerView.Adapter<PizzasAdapter.PizzaViewHolder>() {
 
     class PizzaViewHolder(layout :ConstraintLayout): RecyclerView.ViewHolder(layout)
 
+    var onClick: (PizzaType) -> Unit = { }
+
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): PizzaViewHolder {
         val card = LayoutInflater.from(parent.context)
             .inflate(R.layout.list_item_pizza, parent, false) as ConstraintLayout
@@ -24,12 +26,14 @@ class PizzasAdapter : RecyclerView.Adapter<PizzasAdapter.PizzaViewHolder>() {
 
     override fun onBindViewHolder(holder: PizzaViewHolder, position: Int) {
         val context = holder.itemView.context
-        val name = when(pizzas[position]) {
+        val type = pizzas[position]
+        val name = when(type) {
             PizzaType.BBQ -> context.getString(R.string.pizza_bbq)
             PizzaType.DIAVOLA -> context.getString(R.string.pizza_diavola)
             PizzaType.PEPPERONI -> context.getString(R.string.pizza_pepperoni)
         }
         holder.itemView.text_pizza_name.text = name
+        holder.itemView.setOnClickListener { onClick(type) }
     }
 
 }

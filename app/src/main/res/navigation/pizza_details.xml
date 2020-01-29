@@ -5,33 +5,42 @@
 
         <fragment
             android:id="@+id/fragment_details_router"
+            android:label="Router"
             android:name="com.vaios.jalapeno.list.PizzaDetailsRouterFragment" >
 
                 <action
                     android:id="@+id/go_to_diavola"
+                    app:popUpToInclusive="true"
+                    app:popUpTo="@id/fragment_details_router"
                     app:destination="@id/fragment_diavola" />
 
                 <action
                     android:id="@+id/go_to_bbq"
+                    app:popUpToInclusive="true"
+                    app:popUpTo="@id/fragment_details_router"
                     app:destination="@id/fragment_bbq" />
 
                 <action
                     android:id="@+id/go_to_pepperoni"
+                    app:popUpToInclusive="true"
+                    app:popUpTo="@id/fragment_details_router"
                     app:destination="@id/fragment_pepperoni" />
 
         </fragment>
 
         <fragment
             android:id="@+id/fragment_diavola"
+            android:label="@string/pizza_diavola"
             android:name="com.vaios.jalapeno.list.DiavolaFragment" />
 
         <fragment
             android:id="@+id/fragment_bbq"
+            android:label="@string/pizza_bbq"
             android:name="com.vaios.jalapeno.list.BBQFragment" />
 
         <fragment
             android:id="@+id/fragment_pepperoni"
+            android:label="@string/pizza_pepperoni"
             android:name="com.vaios.jalapeno.list.PepperoniFragment" />
-
 
 </navigation>

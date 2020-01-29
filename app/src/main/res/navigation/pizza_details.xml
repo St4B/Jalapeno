@@ -5,7 +5,21 @@
 
         <fragment
             android:id="@+id/fragment_details_router"
-            android:name="com.vaios.jalapeno.list.PizzaDetailsRouterFragment" />
+            android:name="com.vaios.jalapeno.list.PizzaDetailsRouterFragment" >
+
+                <action
+                    android:id="@+id/go_to_diavola"
+                    app:destination="@id/fragment_diavola" />
+
+                <action
+                    android:id="@+id/go_to_bbq"
+                    app:destination="@id/fragment_bbq" />
+
+                <action
+                    android:id="@+id/go_to_pepperoni"
+                    app:destination="@id/fragment_pepperoni" />
+
+        </fragment>
 
         <fragment
             android:id="@+id/fragment_diavola"
